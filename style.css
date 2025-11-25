@@ -1,0 +1,825 @@
+/* ============================================================
+   GLOBAL STYLE
+   ============================================================ */
+   body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b132b 0%, #162046 50%, #0b132b 100%);
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #f5b700; /* Emas */
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(245, 183, 0, 0.3);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: #f5b700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+/* ============================================================
+   LAYOUT & CONTAINER
+   ============================================================ */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 20px auto 60px;
+    padding: 20px;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #0b132b 0%, #162046 100%);
+    padding: 12px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: #f5b700;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #f1f1f1;
+    margin-left: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f5b700;
+}
+
+/* ============================================================
+   TABLE STYLE
+   ============================================================ */
+.table-list {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #1c2541 0%, #162046 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(245, 183, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(245, 183, 0, 0.1);
+}
+
+th {
+    background: linear-gradient(90deg, #3a506b 0%, #5a6c7d 100%);
+    color: #f5b700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(28, 37, 65, 0.8);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(11, 19, 43, 0.8);
+}
+
+tr:hover {
+    background-color: rgba(58, 80, 107, 0.9);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* Action buttons in table */
+.actions a {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    display: inline-block;
+    margin: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(245, 183, 0, 0.2);
+}
+
+.actions a:hover {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    color: #0b132b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 183, 0, 0.3);
+}
+
+/* Badge styles */
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.badge.pdf {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+}
+
+.badge.empty {
+    background: #666;
+    color: #ccc;
+}
+
+/* ============================================================
+   FORM STYLE
+   ============================================================ */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.modern-form {
+    background: linear-gradient(135deg, #1c2541 0%, #162046 100%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(245, 183, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f5b700;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    width: 16px;
+}
+
+.form-hint {
+    display: block;
+    margin-top: 4px;
+    color: #ccc;
+    font-size: 12px;
+    font-style: italic;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #3a506b;
+    border-radius: 8px;
+    background-color: #0b132b;
+    color: #f1f1f1;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #f5b700;
+    box-shadow: 0 0 10px rgba(245, 183, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    transform: translateY(-1px);
+}
+
+.current-pdf {
+    background: rgba(11, 19, 43, 0.5);
+    border: 1px solid #3a506b;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.current-pdf h4 {
+    margin: 0 0 10px 0;
+    color: #f5b700;
+    font-size: 16px;
+}
+
+.current-pdf h4 i {
+    margin-right: 8px;
+}
+
+.pdf-link {
+    color: #f5b700;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pdf-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.pdf-link i {
+    margin-right: 5px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 140px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 183, 0, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #f5b700;
+    border: 2px solid #f5b700;
+}
+
+.btn-secondary:hover {
+    background: #f5b700;
+    color: #0b132b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 183, 0, 0.2);
+}
+
+.btn-primary i,
+.btn-secondary i {
+    margin-right: 8px;
+}
+
+form {
+    background: linear-gradient(135deg, #1c2541 0%, #162046 100%);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(245, 183, 0, 0.1);
+    margin: 30px auto;
+    backdrop-filter: blur(10px);
+}
+
+/* Error message styling */
+.error {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error p {
+    margin: 0;
+}
+
+/* ============================================================
+   BUTTON STYLE
+   ============================================================ */
+button,
+input[type="submit"],
+a.button {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(245, 183, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+a.button:hover {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    color: #0b132b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(245, 183, 0, 0.4);
+}
+
+/* Button variations */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.btn.small {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn.info {
+    background: linear-gradient(45deg, #17a2b8, #138496);
+    color: white;
+}
+
+.btn.warning {
+    background: linear-gradient(45deg, #ffc107, #e0a800);
+    color: #212529;
+}
+
+.btn.danger {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination a,
+.pagination .button {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 5px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(245, 183, 0, 0.2);
+}
+
+.pagination a:hover,
+.pagination .button:hover {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    color: #0b132b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 183, 0, 0.3);
+}
+
+.pagination .current {
+    background: linear-gradient(45deg, #ffffff, #f5b700);
+    color: #0b132b;
+    transform: scale(1.1);
+}
+
+/* ============================================================
+   PDF VIEWER & ALTERNATIVES
+   ============================================================ */
+.pdf-alternatives {
+    margin: 20px 0;
+}
+
+.pdf-alternatives h4 {
+    color: #f5b700;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.pdf-option {
+    background: rgba(28, 37, 65, 0.8);
+    border: 1px solid #3a506b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.pdf-option:hover {
+    background: rgba(58, 80, 107, 0.9);
+    border-color: #f5b700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 183, 0, 0.2);
+}
+
+.pdf-option h5 {
+    color: #f5b700;
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.pdf-option p {
+    color: #f1f1f1;
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.pdf-option iframe {
+    border: 1px solid #3a506b;
+    border-radius: 8px;
+    width: 100%;
+    height: 600px;
+    background: #fff;
+}
+
+/* Button styles for PDF options */
+.btn.large {
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+.btn.primary {
+    background: linear-gradient(45deg, #f5b700, #ffb347);
+    color: #0b132b;
+    box-shadow: 0 2px 4px rgba(245, 183, 0, 0.3);
+}
+
+.btn.primary:hover {
+    background: linear-gradient(45deg, #ffb347, #f5b700);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 183, 0, 0.4);
+}
+
+.btn.secondary {
+    background: linear-gradient(45deg, #3a506b, #5a6c7d);
+    color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(58, 80, 107, 0.3);
+}
+
+.btn.secondary:hover {
+    background: linear-gradient(45deg, #5a6c7d, #3a506b);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(58, 80, 107, 0.4);
+}
+
+.pdf-viewer-container {
+    background: rgba(28, 37, 65, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(245, 183, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.pdf-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(11, 19, 43, 0.8);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.pdf-controls span {
+    color: #f5b700;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.pdf-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 600px;
+    background: #0b132b;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: auto;
+    position: relative;
+}
+
+/* Fullscreen styles */
+.pdf-viewer-container.fullscreen-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: #0b132b;
+    border-radius: 0;
+    padding: 20px;
+    box-shadow: none;
+    margin: 0;
+    overflow: auto;
+}
+
+.pdf-viewer-container.fullscreen-active .pdf-viewer {
+    min-height: calc(100vh - 80px);
+    padding: 10px;
+    overflow: visible;
+}
+
+.pdf-viewer-container.fullscreen-active .pdf-controls {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    background: rgba(11, 19, 43, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-loading, .pdf-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f5b700;
+}
+
+.pdf-loading i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pdf-error i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#pdf-canvas {
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(245, 183, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+.no-pdf {
+    text-align: center;
+    padding: 40px;
+    background: rgba(28, 37, 65, 0.5);
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.no-pdf p {
+    color: #f1f1f1;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    text-align: center;
+    color: #f5b700;
+    margin: 40px 0 20px;
+    font-size: 14px;
+    opacity: 0.8;
+    text-shadow: 0 1px 2px rgba(245, 183, 0, 0.2);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .table-list {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .pagination a,
+    .pagination .button {
+        padding: 8px 12px;
+        margin: 3px;
+    }
+
+    .pdf-alternatives {
+        margin: 15px 0;
+    }
+
+    .pdf-option {
+        padding: 15px;
+    }
+
+    .pdf-option iframe {
+        height: 500px;
+    }
+
+    .pdf-viewer-container {
+        padding: 15px;
+    }
+
+    .pdf-controls {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .pdf-controls .btn.small {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .pdf-viewer {
+        min-height: 400px;
+        padding: 15px;
+    }
+
+    #pdf-canvas {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .table-list {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 4px;
+    }
+
+    .actions a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    button,
+    input[type="submit"],
+    a.button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .pdf-alternatives {
+        margin: 10px 0;
+    }
+
+    .pdf-option {
+        padding: 10px;
+    }
+
+    .pdf-option iframe {
+        height: 400px;
+    }
+
+    .pdf-viewer-container {
+        padding: 10px;
+    }
+
+    .pdf-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pdf-viewer {
+        height: 400px;
+    }
+
+    .no-pdf {
+        padding: 20px;
+    }
+
+    .no-pdf p {
+        font-size: 16px;
+    }
+}

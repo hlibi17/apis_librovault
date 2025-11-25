@@ -1,0 +1,17 @@
+# Allow PDF files to be served inline for embedding
+<FilesMatch "\.(pdf)$">
+    Header set Content-Type application/pdf
+    Header set Content-Disposition inline
+    Header set Cache-Control "public, max-age=31536000"
+    Header set Access-Control-Allow-Origin "*"
+    Header set X-Frame-Options "ALLOWALL"
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options ALLOWALL
+</IfModule>
